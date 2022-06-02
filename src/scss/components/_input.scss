@@ -1,0 +1,24 @@
+.input{
+  border: 2px solid black;
+  height: 52px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: 0.3s;
+  &:focus {
+      padding: 10px;
+    }
+  
+  &--search {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 1px solid black;
+    width: 80%;
+  }
+}
+label {
+  display: block;
+  padding-top: 104px;
+}

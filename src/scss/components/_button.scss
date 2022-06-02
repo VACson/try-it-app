@@ -1,0 +1,33 @@
+.button {
+  height: 52px;
+  background-color: $primary;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  margin-top: 16px;
+  color: $background;
+  font-size: 1.25rem;
+  &--search {
+    width: 20%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    }
+  &--login {
+    width: 40vw;
+    margin: 10px;
+    background: none;
+    outline: 1px solid white;
+    &--reverse {
+      background: white;
+      color: black;
+    }
+  }
+  &--back {
+    background: none;
+    width: 12px;
+    height: 12px;
+    color: black;
+    padding-left: 10px;
+  }
+}

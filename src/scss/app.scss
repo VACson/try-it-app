@@ -1,0 +1,29 @@
+@import 'fonts';
+@import 'variables';
+
+@import 'normalize';
+
+@import 'components/all';
+
+body {
+  background-color: $background;
+  padding: 0;
+}
+.mainlogo, .label {
+  font-family: 'Comfortaa', cursive;
+  font-weight: lighter;
+  padding: 0;
+}
+.wrapper {
+  width: calc(100vw - 10px);
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
+}
+.page-wrapper {
+  margin: 0 5%;
+}
+.label {
+  margin-top: 44px;
+  font-size: 36px;
+}
