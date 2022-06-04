@@ -7,27 +7,40 @@
   width: 100%;
   margin-top: 16px;
   color: $background;
-  font-size: 1.25rem;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 1s;
+  }
   &--search {
     width: 20%;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     }
-  &--login {
-    width: 40vw;
-    margin: 10px;
-    background: none;
-    outline: 1px solid white;
+  &--medium {
+     width: 40vw;
+     margin: 10px;
+  }
+  &--outline {
+    background: $background--reverse;
+    outline: 1px solid $background;
+    
     &--reverse {
-      background: white;
-      color: black;
+      background: $background;
+      color: $background--reverse;
+      outline: 1px solid $background--reverse;
+      
     }
   }
   &--back {
     background: none;
     width: 12px;
     height: 12px;
-    color: black;
+    color: $background--reverse;
     padding-left: 10px;
   }
 }

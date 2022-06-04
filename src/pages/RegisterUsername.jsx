@@ -4,30 +4,24 @@ import { Link } from 'react-router-dom';
 import { Button, Input } from "../components";
 import Return from "../assets/img/Union.svg"
 
-function Register() {
+function RegisterUsername() {
   return (
     <div className='page-wrapper'>
       <div className='registerpage'>
         <form action="register">
         <Link
-          to="/loggedout"
+          to="/register"
           className={'button--back'}>
           <img
           width='16'
           height='16' 
           src={Return} alt="back" />
           </Link>
-          <label htmlFor='input' className='label'>Register</label>
+          <label htmlFor='input' className='label'>Username</label>
           <div>
             <Input 
-            placeholder={'E-mail@example.com'}/>
-            <Input 
-            placeholder={'Create a password'}
-            type={'password'}/>
-            <Link
-            to="/register/username">
-              <Button>Next</Button>
-            </Link>
+            placeholder={'Create a username'}/>
+            <Button>Next</Button>
           </div>
         </form>
       </div>
@@ -35,4 +29,4 @@ function Register() {
   )
 }
 
-export default Register
+export default RegisterUsername

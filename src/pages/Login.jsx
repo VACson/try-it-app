@@ -17,7 +17,7 @@ function Login() {
           height='16' 
           src={Return} alt="back" />
           </Link>
-          <label htmlFor='login' className='label'>Login</label>
+          <label htmlFor='input' className='label'>Login</label>
           <div>
             <Input 
             placeholder={'E-mail'}/>

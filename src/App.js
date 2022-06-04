@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Search, Chat, Profile, Create, Register, Login, LoggedOut } from "./pages";
+import { Home, Search, Chat, Profile, Create, Register, RegisterUsername, Login, LoggedOut } from "./pages";
 import { Footer } from "./components";
 
 
@@ -18,10 +18,10 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Route>
           <Route>
-            <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
             <Route path="loggedout" element={<LoggedOut />} />
-          
+            <Route path="register" element={<Register />} />
+            <Route path="register/username" element={<RegisterUsername />} />
+            <Route path="login" element={<Login />} />
           </Route>
       </Routes>
     </div>

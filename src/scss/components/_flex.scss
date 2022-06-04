@@ -3,4 +3,12 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  &--start {
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+}
+.browse {
+  flex-wrap: wrap;
+  margin-bottom: 90px;
 }

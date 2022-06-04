@@ -1,10 +1,13 @@
 .footer {
   position: fixed;
-  background-color: inherit;
+  background-color: $background;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  z-index: 6;
+  border-top: 1px solid #ccc;
 }
 .toolbar {
+  height: 10vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;

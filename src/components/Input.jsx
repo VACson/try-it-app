@@ -5,8 +5,8 @@ const SearchField = ({ onClick, className, children, type, placeholder }) =>{
   return (
     <input 
     type={type} 
-    id='search' 
-    name='search' 
+    id='input' 
+    name='input' 
     placeholder={placeholder} 
     className={classNames('input', className)}>
     {children}

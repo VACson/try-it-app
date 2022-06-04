@@ -10,11 +10,11 @@ function LoggedOut() {
         <div className="flex">
           <Link to="/login">
             <Button
-            className={'button--login'}>Log In</Button>
+            className={'button--outline button--medium'}>Log In</Button>
           </Link>
           <Link to="/register">
             <Button
-            className={'button--login button--login--reverse' }>Sign Up</Button>
+            className={'button--outline button--outline--reverse button--medium' }>Sign Up</Button>
           </Link>
         </div>
       </div>

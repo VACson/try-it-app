@@ -24,12 +24,12 @@ function Footer() {
             <img width="50" src={toolbarSearch} alt="Search" />
           </div>
         </Link>
-        <Link to="/create">
+        <Link to="#">
           <div className="toolbar__item">
-            <img width="50" src={toolbarNew} alt="New" />
+            <img width="70" src={toolbarNew} alt="New" />
           </div>
         </Link>
-        <Link to="/chat">
+        <Link to="#">
           <div className="toolbar__item">
             <img width="50" src={toolbarChat} alt="Chat" />
           </div>
