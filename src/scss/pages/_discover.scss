@@ -30,17 +30,15 @@
   object-fit: cover;
 }
 .heading {
-  padding-left: 3vw;
   font-size: 20px;
   font-weight: bold;
 }
-.activityitem {
+.categoryitem {
   width: 100%;
-  padding: 2vw;
-  @media (max-width: 768) {
-    width: 45%;
-    margin: 2.5%;
+  @media (max-width: 768px) {
+   padding: 0.5%;
   }
+
   &--popular {
     width: 100%;
   }

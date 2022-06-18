@@ -5,14 +5,14 @@ function Profile() {
   return (
     <div className="page-wrapper">
       <ProfilePhoto  className='flex'/>
-      <div className="username flex">
+      <div className="username flex flex--center">
         username
       </div>
-      <div className="city flex">
+      <div className="city flex flex--center">
         city
       </div>
       <ProfileBio />
-      <Button className={'button--outline button--outline--reverse'}>
+      <Button>
         MESSAGE
       </Button>
       <Button className={'button--outline'} >

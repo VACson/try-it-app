@@ -1,14 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from 'store/slices/userSlice';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-import { Button, Input } from "../components";
+import { Form } from "../components";
 import Return from "../assets/img/Union.svg"
 
 function Register() {
+  const dispatch = useDispatch();
+  const push = useNavigate();
+  const handleRegister = (email, password) => {
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(({user}) => {
+          console.log(user);
+          dispatch(setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken
+          }))
+          push('/');
+        })
+        .catch(console.error)
+  }
+
   return (
     <div className='page-wrapper'>
       <div className='registerpage'>
-        <form action="register">
         <Link
           to="/loggedout"
           className={'button--back'}>
@@ -16,20 +35,11 @@ function Register() {
           width='16'
           height='16' 
           src={Return} alt="back" />
-          </Link>
-          <label htmlFor='input' className='label'>Register</label>
-          <div>
-            <Input 
-            placeholder={'E-mail@example.com'}/>
-            <Input 
-            placeholder={'Create a password'}
-            type={'password'}/>
-            <Link
-            to="/register/username">
-              <Button>Next</Button>
-            </Link>
-          </div>
-        </form>
+        </Link>
+        <Form 
+          title="Register"
+          handleClick={handleRegister}
+        />
       </div>
     </div>
   )

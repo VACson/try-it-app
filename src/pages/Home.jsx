@@ -1,21 +1,22 @@
-import React from 'react'
-import { ActivityIcon, Popular } from '../components'
+import React, {useState} from 'react'
+import { ActivityList, Popular } from '../components'
+import MOCK_DATA from '../MOCK_DATA.json'
+
+
 
 function Home() {
+
+  const [activityList, setActivityList] = useState(MOCK_DATA);
   return (
-      <div>
+      <div className='page-wrapper'>
         <div className='label'>Discover</div><br></br>
         <div className='heading'>What's popular today</div><br></br>
-        <div className="flex--slider">
+        <div>
           <Popular />
         </div>
         <div className='heading'>Browse all</div>
-        <div className="browse flex">
-          <ActivityIcon className={"smallicon"}/>
-          <ActivityIcon className={"smallicon"}/>
-          <ActivityIcon className={"smallicon"}/>
-          <ActivityIcon className={"smallicon"}/>
-        </div>
+          <ActivityList className={'browse flex'} activityList={activityList}/>
+          
       </div>
   )
 }

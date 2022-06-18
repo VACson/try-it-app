@@ -1,0 +1,47 @@
+
+.option {
+  color: inherit;
+  font-size: inherit;
+  background: $background;
+  &:hover {
+    background: $background;
+  }
+}
+.custom-select {
+  &__control {
+  background-color: transparent !important;
+  border: 2px solid $background--reverse !important;
+  border-radius: 5px !important;
+  border-bottom: 1px solid #000;
+  box-shadow: none !important;
+  height: 52px;
+  margin: 0;
+  }
+  &__multi-value, &__multi-value__label, &__multi-value__remove{
+    // background: $background !important;
+    color: $background--reverse !important;
+    text-transform: uppercase !important ;
+    border-radius: 5px !important;
+    padding: 3px 4px !important;
+  }
+  &__menu {
+    background-color: $background !important;
+    width: 100% !important;
+    margin: 0 !important;
+    &:hover {
+      background: $background !important;
+      color: $background--reverse !important;
+    }
+  }
+  &__option {
+    cursor: pointer !important;
+    &--is-focused, &:active {
+      background-color: $background !important;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #ccc !important;
+      }
+    }
+  }
+}

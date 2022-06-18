@@ -7,14 +7,14 @@ function LoggedOut() {
   return (
       <div className='logoutpage'>
         <div className="mainlogo">acti</div>
-        <div className="flex">
+        <div className="mainbuttons">
           <Link to="/login">
             <Button
             className={'button--outline button--medium'}>Log In</Button>
           </Link>
           <Link to="/register">
             <Button
-            className={'button--outline button--outline--reverse button--medium' }>Sign Up</Button>
+            className={'button--medium'}>Sign Up</Button>
           </Link>
         </div>
       </div>

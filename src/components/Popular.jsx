@@ -7,36 +7,47 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
-import ActivityIcon from "./ActivityIcon";
+import CategoryIcon from "./CategoryIcon";
 
 function Popular() {
   return (
     <>
       <Swiper 
         slidesPerView={"auto"}
-        spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper">
+        className="mySwiper"
+        breakpoints= {{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1
+          },
+          // when window width is >= 480px
+          768: {
+            slidesPerView: 3
+          },
+          // when window width is >= 640px
+          1200: {
+            slidesPerView: 4
+          }}}
+        >
         <SwiperSlide> <Link to="/search" className="swiper-slide-img">
-          <ActivityIcon />
-          </Link></SwiperSlide> 
-        <SwiperSlide> <Link to="/search" className="swiper-slide-img"><img 
-          width='100%'
-          src="https://via.placeholder.com/150" 
-          alt="popular" /></Link>
+          <CategoryIcon />
+          </Link>
+        </SwiperSlide> 
+        <SwiperSlide> <Link to="/search" className="swiper-slide-img">
+          <CategoryIcon />
+          </Link>
         </SwiperSlide>
-        <SwiperSlide> <Link to="/search" className="swiper-slide-img"><img 
-          width='100%'
-          src="https://via.placeholder.com/150" 
-          alt="popular" /></Link>
+        <SwiperSlide> <Link to="/search" className="swiper-slide-img">
+          <CategoryIcon />
+          </Link>
         </SwiperSlide>
-        <SwiperSlide> <Link to="/search" className="swiper-slide-img"><img 
-          width='100%'
-          src="https://via.placeholder.com/150" 
-          alt="popular" /></Link>
+        <SwiperSlide> <Link to="/search" className="swiper-slide-img">
+          <CategoryIcon />
+          </Link>
         </SwiperSlide>
       </Swiper>
     </>

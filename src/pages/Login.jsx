@@ -1,32 +1,45 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from 'store/slices/userSlice';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-import { Button, Input } from "../components";
+import { Form } from "../components";
 import Return from "../assets/img/Union.svg"
 
 function Login() {
+  const dispatch = useDispatch();
+  const push = useNavigate();
+  const handleLogin = (email, password) => {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email, password)
+        .then(({user})=> {
+          console.log(user);
+          dispatch(setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken
+          }))
+          push('/');
+        })
+        .catch(() => alert('Invalid user'))
+  }
+
   return (
     <div className='page-wrapper'>
       <div className='loginpage'>
-        <form action="login">
-          <Link
+        <Link
           to="/loggedout"
           className={'button--back'}>
           <img
           width='16'
           height='16' 
           src={Return} alt="back" />
-          </Link>
-          <label htmlFor='input' className='label'>Login</label>
-          <div>
-            <Input 
-            placeholder={'E-mail'}/>
-            <Input 
-            placeholder={'Password'}
-            type={'password'}/>
-            <Button>Next</Button>
-          </div>
-        </form>
+        </Link>
+        <Form 
+          title="Log in"
+          handleClick={handleLogin}
+        />
       </div>
     </div>
   )
