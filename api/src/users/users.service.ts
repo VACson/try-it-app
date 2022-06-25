@@ -1,19 +1,29 @@
 import { Injectable } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
 
+export class TokenData {
+  accessToken: string;
+  expiresIn: string;
+}
+export interface JwtPayload {
+  email: string;
+}
 @Injectable()
 export class UsersService {
   constructor(
     @InjectRepository(User)
     private usersRepository: Repository<User>,
+    private jwtService: JwtService,
   ) {}
 
-  create(createUserDto: CreateUserDto): Promise<User> {
-    return this.usersRepository.save(createUserDto);
+  async create(createUserDto: CreateUserDto): Promise<{ accessToken: string }> {
+    const payload = await this.usersRepository.save(createUserDto);
+    return this._createToken(payload);
   }
 
   findAll() {
@@ -30,5 +40,14 @@ export class UsersService {
 
   remove(id: number) {
     return `This action removes a #${id} user`;
+  }
+
+  private _createToken({ email }: User): TokenData {
+    const payload: JwtPayload = { email };
+    const accessToken = this.jwtService.sign(payload);
+    return {
+      expiresIn: '15min' || process.env.JWT_EXPIRESIN,
+      accessToken,
+    };
   }
 }

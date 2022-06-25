@@ -2,7 +2,7 @@ import { DefaultApi } from "./api";
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "123",
+  baseURL: "http://localhost:5001",
   timeout: 30000,
   headers: {
     Accept: "application/json",
@@ -25,6 +25,6 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-const api_client = new DefaultApi(undefined, "321", axiosInstance);
+const api_client = new DefaultApi(undefined, "", axiosInstance);
 
 export default api_client;

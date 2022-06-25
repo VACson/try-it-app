@@ -83,49 +83,6 @@ export interface UpdateUserDto {
      */
     'password'?: string;
 }
-/**
- * 
- * @export
- * @interface User
- */
-export interface User {
-    /**
-     * 
-     * @type {number}
-     * @memberof User
-     */
-    'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'nickname': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'email': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'password'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'bio'?: string;
-}
 
 /**
  * DefaultApi - axios parameter creator
@@ -318,7 +275,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async usersControllerCreate(createUserDto: CreateUserDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+        async usersControllerCreate(createUserDto: CreateUserDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.usersControllerCreate(createUserDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -378,7 +335,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersControllerCreate(createUserDto: CreateUserDto, options?: any): AxiosPromise<User> {
+        usersControllerCreate(createUserDto: CreateUserDto, options?: any): AxiosPromise<void> {
             return localVarFp.usersControllerCreate(createUserDto, options).then((request) => request(axios, basePath));
         },
         /**
