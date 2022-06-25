@@ -1,0 +1,14 @@
+version: '2'
+services:
+  cabin_db:
+    image: mysql:latest
+    volumes:
+      - './.mysql-data/db:/var/lib/mysql'
+    restart: always
+    ports:
+      - 33033:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: try-it-app
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
