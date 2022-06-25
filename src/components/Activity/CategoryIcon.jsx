@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import placeholder from "../assets/img/placeholder.png"
+import placeholder from "assets/img/placeholder.png"
 
 function CategoryIcon({ className }) {
   return (

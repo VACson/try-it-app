@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Input, Button }  from '../components'
+import { Input, Button }  from 'components'
 
 function Form({title, handleClick}) {
   const [email, setEmail] = useState('');

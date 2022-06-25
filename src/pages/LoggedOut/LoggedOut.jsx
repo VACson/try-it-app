@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import { Button } from '../components'
+import { Button } from 'components'
 
 function LoggedOut() {
   return (
@@ -10,11 +10,11 @@ function LoggedOut() {
         <div className="mainbuttons">
           <Link to="/login">
             <Button
-            className={'button--outline button--medium'}>Log In</Button>
+            className={'button--medium'}>Log In</Button>
           </Link>
           <Link to="/register">
             <Button
-            className={'button--medium'}>Sign Up</Button>
+            className={'button--outline button--medium'}>Sign Up</Button>
           </Link>
         </div>
       </div>

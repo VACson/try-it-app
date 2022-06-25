@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ProfilePhoto, ProfileBio } from '../components'
+import { Button, ProfilePhoto, ProfileBio } from 'components'
 
 function Profile() {
   return (

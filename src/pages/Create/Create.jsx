@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Option } from '../components';
+import { Option } from 'components';
 
 
 function Create() {
@@ -7,8 +7,8 @@ function Create() {
   return (
     <div className="wrapper">
       <div className="page-wrapper">
-        <div className="label">What u wanna do today?</div>
         <form>
+          <div className="label label--small">What u wanna do today?</div>
           <Option 
           onChange={(e) => setCategory(e.target.value)}
           />

@@ -6,7 +6,7 @@ const options = [
     { value: 'event', label: 'Events' },
   ]
 
-function Option ({ onClick, className, children, type, placeholder }) { 
+function Option ({ onClick }) { 
   const [currentCategory, setCurrentCategory] = useState([])
   const isMulti = true
 
@@ -30,6 +30,7 @@ function Option ({ onClick, className, children, type, placeholder }) {
     classNamePrefix='custom-select'
     isMulti={isMulti}
     onChange={onChange}
+    onClick={onClick}
     value={getValue()}
     isSearchable={false}
     options={options} />

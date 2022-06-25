@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Input, ActivityList } from '../components'
-import MOCK_DATA from '../MOCK_DATA.json'
+import { Input, ActivityList } from 'components'
+import MOCK_DATA from 'MOCK_DATA.json'
 
 const filterActivity = (searchText, listOfActivity) => {
   if (!searchText) {

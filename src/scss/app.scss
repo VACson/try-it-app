@@ -22,11 +22,18 @@ body {
 }
 .page-wrapper {
   padding: 0 2vw;
-  margin-bottom: 11vh;
+  margin-top: 11vh;
+  margin-bottom: 0;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 11vw;
+    margin-top: 0;
+  }
 }
 .label {
   display: block;
   margin: 44px 0 22px 0;
-  font-size: 48px;
+  font-size: 30px;
   font-weight: normal;
+  transition: 0.3s;
+  
 }
