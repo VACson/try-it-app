@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api-client-generate": "openapi-generator-cli generate -g typescript-axios -i http://localhost:5001/docs-json --package-name TryItAppAPI --type-mappings DateTime=Date -o src/utils/api"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1",
+    "@types/node": "^18.0.0"
   }
 }
