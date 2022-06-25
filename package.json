@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "@join-com/typeorm-class-validator-is-uniq": "^2.0.0"
-  }
-}
