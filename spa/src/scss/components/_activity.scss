@@ -1,0 +1,22 @@
+.activityicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  height: 150px;
+  @media (max-width: 1200px){
+    width: 33.33%;
+  }
+  @media (max-width: 768px){
+    width: 48%;
+  }
+  
+
+  max-height: 400px;
+  margin: 1%;
+  border-radius: 10px;
+  color: $background;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}

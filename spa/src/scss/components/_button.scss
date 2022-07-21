@@ -1,14 +1,15 @@
 .button {
   height: 52px;
-  background-color: $primary;
+  width: 100%;
+  background: $background;
+  color: $background--reverse;
   border: none;
   border-radius: 5px;
-  outline: none;
-  width: 100%;
+  border: 2px solid $background--reverse;
   margin-top: 16px;
-  color: $background;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
+  text-transform: uppercase;
   transition: 0.5s;
   opacity: 1;
   cursor: pointer;
@@ -20,21 +21,17 @@
     width: 20%;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    border-left: none;
     }
   &--medium {
-     width: 40vw;
-     margin: 10px;
+     width: 46%;
+     margin: 0 0 2% 3%;
   }
   &--outline {
+    color: $background;
     background: $background--reverse;
-    outline: 1px solid $background;
+    border: 2px solid $background;
     
-    &--reverse {
-      background: $background;
-      color: $background--reverse;
-      outline: 1px solid $background--reverse;
-      
-    }
   }
   &--back {
     background: none;

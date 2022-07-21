@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import { Button, Input } from "../components";
-import Return from "../assets/img/Union.svg"
+import { Button, Input } from "../../components";
+import Return from "../../assets/img/Union.svg"
 
 function Login() {
   return (

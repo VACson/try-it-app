@@ -1,17 +1,8 @@
-import React from 'react'
-import classNames from 'classnames'
+import { forwardRef } from 'react';
+import cn from 'classnames';
 
-const SearchField = ({ onClick, className, children, type, placeholder }) =>{
-  return (
-    <input 
-    type={type} 
-    id='input' 
-    name='input' 
-    placeholder={placeholder} 
-    className={classNames('input', className)}>
-    {children}
-    </input>
-  )
-}
+const SearchField = forwardRef(({ className, ...props }, ref) => {
+  return <input id="input" name="input" ref={ref} className={cn('input', className)} {...props} />;
+});
 
-export default SearchField
+export default SearchField;

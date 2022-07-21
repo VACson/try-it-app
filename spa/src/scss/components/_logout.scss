@@ -2,19 +2,22 @@
   display: flex;
   flex-flow: column nowrap;
   flex: 8 2;
-  background-color: black;
-  color: white;
+  background: $background--reverse;
+  color: $background;
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
 }
 .mainlogo {
-  height: 90vh;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 54px;
+}
+.mainbuttons {
+  width: 100%;
 }
 .loginpage, .registerpage{
   padding: 0;

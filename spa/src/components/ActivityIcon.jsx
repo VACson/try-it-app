@@ -1,14 +1,11 @@
 import React from 'react'
-import classNames from 'classnames'
-import placeholder from "../assets/img/placeholder.png"
 
-function ActivityIcon({ className }) {
+
+function ActivityIcon() {
   return (
-      <img 
-      width='100%'
-      src={placeholder} 
-      alt="popular"
-      className={classNames('activityitem', className)} />
+    <Activity 
+    event={activity.event}
+  />
   )
 }
 

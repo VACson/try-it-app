@@ -8,6 +8,7 @@
 }
 .toolbar {
   height: 10vh;
+  max-height: 60px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;

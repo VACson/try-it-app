@@ -1,4 +1,4 @@
-.searchpage > form{
+form[action=search]{
   display: flex;
   flex-flow: column nowrap;
 }

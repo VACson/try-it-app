@@ -24,9 +24,9 @@ function Footer() {
             <img width="50" src={toolbarSearch} alt="Search" />
           </div>
         </Link>
-        <Link to="#">
+        <Link to="/create">
           <div className="toolbar__item">
-            <img width="70" src={toolbarNew} alt="New" />
+            <img width="50" src={toolbarNew} alt="New" />
           </div>
         </Link>
         <Link to="#">

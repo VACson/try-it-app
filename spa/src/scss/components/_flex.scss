@@ -1,14 +1,18 @@
 .flex {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  &--start {
-    justify-content: start;
-    flex-wrap: wrap;
+  &--center {
+    justify-content: center;
   }
 }
 .browse {
   flex-wrap: wrap;
   margin-bottom: 90px;
+}
+.m-auto {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
